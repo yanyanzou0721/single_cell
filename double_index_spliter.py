@@ -162,6 +162,8 @@ def process_all(input_fq, all_indexes, unmatched, mismatch, phred):
 @click.option("--phred",
     default=33,
     help="encode of fastq quality string.")
+
+
 def main_(input_fastq, index_file, mismatch, outdir, gzip, phred):
     mis_a, mis_b = mismatch = get_mismatch(mismatch)
     log.info("mismatch threshold:\nindex-a: {}\nindex-b: {}".format(mis_a, mis_b))
